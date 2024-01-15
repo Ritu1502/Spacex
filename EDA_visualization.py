@@ -1,29 +1,19 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# <center>
-#     <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/labs/module_2/%20https:/cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/labs/images/IDSNlogo.png" width="300" alt="cognitiveclass.ai logo">
-# </center>
-# 
 
 # # **SpaceX  Falcon 9 First Stage Landing Prediction**
 # 
 
-# ## Assignment: Exploring and Preparing Data
 # 
 
-# Estimated time needed: **70** minutes
+#Here, I will predict if the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is due to the fact that SpaceX can reuse the first stage.
 # 
 
-# In this assignment, we will predict if the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is due to the fact that SpaceX can reuse the first stage.
-# 
-# In this lab, you will perform Exploratory Data Analysis and Feature Engineering.
 # 
 
 # Falcon 9 first stage will land successfully
 # 
 
-# ![](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0701EN-SkillsNetwork/api/Images/landing\_1.gif)
+
 # 
 
 # Several examples of an unsuccessful landing are shown here:
@@ -257,10 +247,7 @@ features.head()
 # ### TASK  7: Create dummy variables to categorical columns
 # 
 
-# Use the function <code>get_dummies</code> and <code>features</code> dataframe to apply OneHotEncoder to the column <code>Orbits</code>, <code>LaunchSite</code>, <code>LandingPad</code>, and <code>Serial</code>. Assign the value to the variable <code>features_one_hot</code>, display the results using the method head. Your result dataframe must include all features including the encoded ones.
-# 
 
-# In[21]:
 
 
 # HINT: Use get_dummies() function on the categorical columns
@@ -295,9 +282,6 @@ features_one_hot = features_one_hot.astype(float)
 features_one_hot
 
 
-# We can now export it to a <b>CSV</b> for the next section,but to make the answers consistent, in the next lab we will provide data in a pre-selected date range.
-# 
-
 # In[23]:
 
 
@@ -307,24 +291,3 @@ features_one_hot.to_csv('dataset_part_3.csv', index=False)
 # <code>features_one_hot.to_csv('dataset_part\_3.csv', index=False)</code>
 # 
 
-# ## Authors
-# 
-
-# <a href="https://www.linkedin.com/in/joseph-s-50398b136/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDS0321ENSkillsNetwork26802033-2022-01-01">Joseph Santarcangelo</a> has a PhD in Electrical Engineering, his research focused on using machine learning, signal processing, and computer vision to determine how videos impact human cognition. Joseph has been working for IBM since he completed his PhD.
-# 
-
-# <a href="https://www.linkedin.com/in/nayefaboutayoun/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDS0321ENSkillsNetwork26802033-2022-01-01">Nayef Abou Tayoun</a> is a Data Scientist at IBM and pursuing a Master of Management in Artificial intelligence degree at Queen's University.
-# 
-
-# ## Change Log
-# 
-
-# | Date (YYYY-MM-DD) | Version | Changed By    | Change Description      |
-# | ----------------- | ------- | ------------- | ----------------------- |
-# | 2021-10-12        | 1.1     | Lakshmi Holla | Modified markdown       |
-# | 2020-09-20        | 1.0     | Joseph        | Modified Multiple Areas |
-# | 2020-11-10        | 1.1     | Nayef         | updating the input data |
-# 
-
-# Copyright © 2020 IBM Corporation. All rights reserved.
-# 
